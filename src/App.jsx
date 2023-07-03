@@ -1,7 +1,8 @@
+import MainPage from "./components/pages/main_page";
 
 function App() {
   return (
-   <div>gfh</div>
+   <MainPage/>
   );
 }
 
