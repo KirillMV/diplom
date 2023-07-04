@@ -1,4 +1,4 @@
-import { Container, Image, Stack } from "react-bootstrap";
+import { Container, Image, Stack, Placeholder } from "react-bootstrap";
 import { useGetComentsQuery } from "../../store/api/posts_api";
 import Accordion from "react-bootstrap/Accordion";
 
@@ -6,9 +6,8 @@ function PostItem({ props }) {
   const { data = [] } = useGetComentsQuery(props.id);
   console.log(data);
   return (
-    <Container data-bs-theme='dark'>
+    <Container className="mt-2">
       <Image
-
         height={70}
         rounded
         src="https://w7.pngwing.com/pngs/970/547/png-transparent-avatar-male-man-mature-old-person-user-user-pictures-icon.png"
@@ -16,15 +15,18 @@ function PostItem({ props }) {
       <div>{props.title}</div>
       <div>{props.body}</div>
 
-      <Accordion defaultActiveKey="0" data-bs-theme='light'>
-        <Accordion.Item eventKey="1">
+      <Accordion
+        defaultActiveKey="0"
+        data-bs-theme="light"
+        style={{ width: "870px" }}
+      >
+        <Accordion.Item eventKey="1" >
           <Accordion.Header>Coments</Accordion.Header>
           <Accordion.Body>
             {data.map((el) => (
-              <Container>
-                <Stack gap={3}>
+              <Container className="mb-5">
+                <Stack>
                   <div className="p-1">{el.email}</div>
-                  <div className="p-1">{el.name}</div>
                   <div className="p-2">{el.body}</div>
                 </Stack>
               </Container>
@@ -35,5 +37,4 @@ function PostItem({ props }) {
     </Container>
   );
 }
-
 export default PostItem;
