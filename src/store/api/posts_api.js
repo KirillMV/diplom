@@ -7,13 +7,14 @@ export const postsApi = createApi({
   }),
   endpoints: (builder) => ({
     getAllPosts: builder.query({
-      query: () => '/',
-      providesTags: ['Tracks'],
+      query: () => "/",
+      providesTags: ["Posts"],
     }),
-    
+    getComents: builder.query({
+      query: (trackId) => `/${trackId}/comments`,
+      providesTags: ["Posts"],
+    }),
   }),
 });
 
-export const {
-useGetAllPostsQuery
-} = postsApi;
+export const { useGetAllPostsQuery, useGetComentsQuery } = postsApi;

@@ -1,10 +1,10 @@
 import { Col, Container, Row, Image } from "react-bootstrap";
 import { useGetAllPostsQuery } from "../../store/api/posts_api";
-import PostItem from "../adirional/post_item";
+import PostItem from "../aditional/post_item";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllPosts } from "../../store/slices/posts_slice";
-import PaginationStructure from "../adirional/pagination";
+import PaginationStructure from "../aditional/pagination";
 
 function MainPage() {
   const dispatch = useDispatch();
