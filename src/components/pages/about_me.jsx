@@ -1,7 +1,7 @@
 import { useState } from "react"
 import NavMenu from "../aditional/burger_menu"
 import { Container,Col,Image,Row } from "react-bootstrap"
-
+import iam from '../../assets/img/iam.jpg'
 function AboutMe(){
 const [visible,setVisible] = useState(false)
 
@@ -9,7 +9,7 @@ const [visible,setVisible] = useState(false)
 
         <Container className="d-flex flex-row" style={{'min-height':'1000px'}}>
         {visible && <NavMenu/>}
-        <Container className="bg-light bg-gradient" style={{'width':'1000px'}}>
+        <Container className="p-3 mb-2 bg-body-secondary" style={{'width':'1000px'}}>
           <Row className="py-3 mx-3 " style={{ 'height': "70px" }}>
             <Col>
               <Image
@@ -19,12 +19,13 @@ const [visible,setVisible] = useState(false)
               />
             </Col>
             <Col md="2">
-              <Image src="" />
+              <Image height={700} src={iam}/>
             </Col>
-            <Col md="8"><div>
-            Я килилл и мне тлидцать 7
+
+            <Col><div>
+           
         </div></Col>
-          </Row>
+          </Row> <div className="mt-5 mr-5"  >Привет меня зовут Кирилл и я очень классный</div>
           </Container>
         </Container>
         
