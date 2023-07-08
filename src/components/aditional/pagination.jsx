@@ -1,4 +1,4 @@
-import { Pagination } from "react-bootstrap";
+import { Container, Pagination } from "react-bootstrap";
 
 function PaginationStructure({ postsPerPage, totalPosts,paginate }) {
   const pageNumbers = [];
@@ -6,9 +6,9 @@ function PaginationStructure({ postsPerPage, totalPosts,paginate }) {
     pageNumbers.push(<Pagination.Item onClick={()=>paginate(i)} key={i}>{i}</Pagination.Item>);
   }
   return (
-    <div>
+    <Container  className='mx-5'>
       <Pagination>{pageNumbers}</Pagination>
-    </div>
+    </Container>
   );
 }
 

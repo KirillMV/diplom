@@ -9,6 +9,9 @@ export const postsSlice = createSlice({
     getAllPosts: (state, action) => {
       state.allPosts = action.payload;
     },
+ 
+
+
   },
 });
 

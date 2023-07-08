@@ -22,12 +22,12 @@ const [visible,setVisible] = useState(false)
               <Image src="" />
             </Col>
             <Col md="8"><div>
-            Я Килилл и мне тлидцать 7
+            Я килилл и мне тлидцать 7
         </div></Col>
           </Row>
           </Container>
         </Container>
-
+        
     )
 }
 

@@ -15,7 +15,7 @@ function NavMenu() {
       <Nav.Item>
         <Nav.Link href="/about">AboutMe</Nav.Link>
       </Nav.Item>
-    </Nav>
+    </Nav> 
   );
 }
 
